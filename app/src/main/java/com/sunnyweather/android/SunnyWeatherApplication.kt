@@ -6,13 +6,15 @@ import android.content.Context
 
 class SunnyWeatherApplication : Application(){
     companion object{
+        const val TOKEN = "uT9d6qapcQ8BPV6t"
+
         @SuppressLint("StaticFieldLeak")
         lateinit var context: Context
-        const val TOKEN = "uT9d6qapcQ8BPV6t"
+
     }
 
     override fun onCreate() {
         super.onCreate()
-        context.applicationContext
+        context = applicationContext
     }
 }
